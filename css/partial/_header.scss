@@ -1,0 +1,96 @@
+
+@mixin headings($color, $size, $family){
+	color: $color;
+	font-size: $size;
+	font-family: $family;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+header{
+	background: linear-gradient(rgba(255, 255, 255,.50),rgba(255,255,255,0.5)),url(..//images/hero.jpg);
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;	
+	max-width: 1920px;
+}
+
+.hero{
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	.headerTitle{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+    	margin: auto;
+  		text-align: center;
+  		h1{
+  			margin: 0;
+  			@include headings ($headerBlack, 60px, $fontStack);
+  		}
+  		h3{
+  			@include headings ($lightGrey, 32px, $fontStack);
+  			font-weight: 400;
+  		}
+	}
+
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	li{
+		
+		a{
+			text-decoration: none;
+			color: $primaryBlack;
+		}
+	}
+}
+
+.btn{
+	@extend %button;
+}
+
+.btn--pink{
+	background-color: $darkPink;
+	color:  #ffffff;
+	padding: 17px 50px;
+	font-size: 16px;
+	transition-duration: 1.5s;
+	&:hover{
+		background: $styleTweakBlue;
+		border: 6px dashed $peach;
+	}
+}
+	@media (max-width: 480px) {
+		.hero{
+			.headerTitle{
+				padding: 2%;
+		  		h1{
+		  			font-size: 40px;
+		  		}
+		  		h3{
+					margin-bottom: 0;
+		  		}
+			}
+
+		}
+		.btn--pink{
+			padding: 15px 40px;
+		}
+
+}
+
+	
+
+

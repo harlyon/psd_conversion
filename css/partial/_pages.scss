@@ -1,0 +1,179 @@
+//P A G E S / Prod 
+.sectionTitle{
+	text-align: center;
+	width: 70%;
+    margin: auto;
+}
+
+p span.bold{
+	color: $primaryBlack;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+h2.visible{
+	position: relative;
+}
+
+h2.visible:after{
+    content:'';
+   	display: block;
+    position: absolute;
+    width: 120px;
+    height: 2px;
+   	background: linear-gradient(to right, $styleTweakBlue, $styleTweakPink, $styleTweakBlue);
+    bottom: -10px;
+    right: 44%;
+}
+
+.pages{
+	a:hover{
+		border-bottom: 1px solid $primaryBlack;
+
+	}
+}
+
+// Pop Prod pages gallery
+.pages{
+	figure{
+		position: relative;
+		.overlay{
+			position: absolute;
+			display: none;
+			background-color:rgba(26, 26, 38, 0.5);
+            top:0;
+            bottom:0;
+            right: 0;
+            left:0;
+		}
+	}
+}
+
+ .pages li:hover .overlay{
+     display: block;
+ }
+
+.pages{
+	.gallery{
+		flex-direction: column;
+		.menu{
+			// width: calc(100% + 15px);
+			width: 100%;
+			.gallery__item{
+				// margin-right: 15px;
+				padding: 7px;
+			}
+		}
+	}
+}
+
+.menu-small{
+	width: 46%;
+	text-transform: uppercase;
+	color: $primaryBlack;
+	margin: auto;
+}
+
+.btn--small{
+	background: white;
+	font-size: 12px;
+	padding: 5%;
+	text-transform: uppercase;
+	@extend %basebtn;
+    &:hover{
+		border: 3px solid $aqua;
+    }
+}
+
+figcaption{
+	text-align: center;
+	p:first-child{
+		font-size: 14px;
+		color: $primaryBlack;
+		font-weight: bold;
+	}
+	p:last-child{
+		font-size: 18px;
+		color: $primaryBlack;
+		span{
+			text-decoration: line-through;
+			color: $lightGrey;
+		}
+	}
+}
+
+	span.tag{
+	@extend %pricetag;
+		background: $aqua;
+	}
+
+	span.tagBlue2{
+		@extend %pricetag;
+		background: $aqua;
+		top: 32px;
+	}
+	span.tagBlue{
+		@extend %pricetag;
+		background: $aqua;
+	}
+	
+	span.tagPeach{
+		@extend %pricetag;
+		background: $peach;
+	}
+
+	span.tagPink2{
+		@extend %pricetag;
+		background: $pink;
+	}
+	span.tagPink{
+		@extend %pricetag;
+		background: $pink;
+	}
+
+	
+
+// Portrait tablet and small desktops 
+@media (max-width: 940px) {
+		.pages{
+			.gallery{
+				flex-direction: row;
+				.menu{
+					// width: calc(100% + 15px);
+					flex-direction: column;
+					justify-content: center;
+					.gallery__item{
+						padding: 6%;
+						.gallery__item img{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+// Landscape phone to portrait tablet 
+@media (max-width: 768px) {
+	}
+
+// Landscape phones and down 
+@media (max-width: 480px) {
+
+		h2.visible:after{
+			right: 32%;
+		}
+		.pages{
+			.gallery{
+				// padding: 0 4%;
+				}
+			}
+
+		.menu-small{
+			flex-direction: column;
+			text-align: center;
+		}
+
+
+	}

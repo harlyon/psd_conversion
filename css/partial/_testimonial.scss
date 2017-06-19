@@ -1,0 +1,71 @@
+// F U L L B L E E D Testimonial section 
+@font-face {
+  font-family: 'press-style';
+  	src: url(..//images/fonts/press_style/PressStyle.woff); format:('woff2');
+         // url(..//images/fonts/press_style/PressStyle.woff); format('woff');
+}
+
+h4{
+	font-family: 'press-style';
+    font-size: 98px;
+    font-weight: 400;
+    margin: 0;
+    color: white;
+}
+
+.tContainer{
+	.tItem1{
+		background: #dddfed;
+	}
+	.tItem2{
+		background: linear-gradient(rgba(26, 26, 38, 0.5),rgba(26, 26, 38, 0.5)),url(..//images/video_img.jpg);
+		background-size: cover; 
+		p{
+			color: white;
+			font-weight: 16px;
+		}
+	}
+}
+
+.tContainer{
+	display: flex;
+	.tItem{
+		width: 50%;
+		text-align: center;
+		padding: 5%;
+	}
+}
+
+.testimonial{
+	.circle{
+		i.fa.fa-circle{
+			color: $lightGrey;
+			i.fa.fa-circle.big{
+				font-size: 22px;
+			}
+		}
+		
+	}
+}
+
+	@media (max-width: 940px) {
+		.tContainer{
+			flex-direction: column;
+			.tItem{
+				width: 100%;
+			}
+		}
+}
+
+
+
+
+	
+
+
+
+
+
+
+
+

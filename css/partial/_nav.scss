@@ -1,0 +1,130 @@
+nav{
+	background: white;
+	z-index: 500;
+	padding: 1% 0;
+}
+
+.navContainer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	.navItem{
+		width: calc(100% / 3);
+		a{
+			padding: 20px 0;
+		}
+	}	
+}
+
+	.navItem1{
+		flex-grow: 1;
+		.menu li{
+			text-transform: uppercase;
+			font-weight: bold;
+			&:hover{
+				color: $hoverPink;
+			}
+		}
+	}	
+	.navItem2{
+		flex-grow: 0;
+		justify-content: center;
+    	display: flex;
+    	.logo img{
+    		width: 100%;
+    	}
+	}
+	.navItem3{
+		flex-grow: 1.5;
+		.menu{
+			justify-content: flex-end;
+			.icons{
+				font-size: 20px;
+				margin-left: 6%;
+				i.fa.fa-bars{
+						display: none;
+					}
+			}
+		}
+	}
+
+	.mainMenu{
+		list-style: none;
+		margin: 0;
+		font-size: 20px;
+		display: none;
+		padding: 0;
+		background: pink;
+		a{
+			text-decoration: none;
+			color: $primaryBlack;
+			font-size: 50px;
+			&:hover{
+				color: $hoverPink;
+			}
+		}
+	}
+
+li.link-light a{
+	color: $lightGrey;
+}
+
+
+// all FA icons
+
+i.fa{
+	transition: scale(1);
+	&:hover{
+		color: $hoverPink;
+		transform: scale(1.5); 
+	}
+}
+
+i.fa-shopping-bag{
+	position: relative;
+	&:after{
+		content: '2';
+	    display: block;
+	    position: absolute;
+	    width: 16px;
+	    height: 16px;
+	    background: #a8edea;
+	    top: -4px;
+	    right: -7px;
+	    border-radius: 50%;
+	    font-size: 14px;
+	    text-align: center;
+	}
+}	
+
+// Landscape phone to portrait tablet 
+	@media (max-width: 1045px) {
+		.navContainer{
+			flex-direction: column;
+			.navItem{
+				width: 100%;
+			}
+			.navItem1{
+				display: none;
+				.menu{
+					width: 100%;
+				}
+			}
+		}
+		.navItem3{
+			width: 100%;
+			.menu{
+				flex-direction: row-reverse;
+				justify-content: space-around;
+				.icons{
+					font-size: 35px;
+					i.fa.fa-bars{
+						display: block;
+					}
+				}			
+			}
+		}
+
+	}
+

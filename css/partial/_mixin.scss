@@ -1,0 +1,17 @@
+
+
+@mixin headings($color, $size, $family){
+	color: $color;
+	font-size: $size;
+	font-family: $family;
+}
+
+// @mixin styleTweak ($width, $height, $bcolor){
+// 	 width: $width;
+// 	 height: $height;
+// 	 background: $bcolor;
+// 	 content:'';
+// 	 display: block;
+// 	 position: absolute;
+	 
+// }
