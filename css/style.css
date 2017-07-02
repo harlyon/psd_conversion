@@ -250,17 +250,17 @@ nav {
     width: calc(100% / 3); }
     .navContainer .navItem a {
       padding: 20px 0; }
+      .navContainer .navItem a:hover {
+        color: #ff9a9e; }
 
 .navItem1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
-  .navItem1 .menu li {
+  .navItem1 .menu {
     text-transform: uppercase;
     font-weight: bold; }
-    .navItem1 .menu li:hover {
-      color: #ff9a9e; }
 
 .navItem2 {
   -webkit-box-flex: 0;
@@ -307,9 +307,6 @@ nav {
     font-size: 50px; }
     .mainMenu a:hover {
       color: #ff9a9e; }
-
-li.link-light a {
-  color: #888890; }
 
 i.fa {
   -webkit-transition: scale(1);
@@ -533,7 +530,8 @@ h2.visible:after {
   right: 44%; }
 
 .pages a:hover {
-  border-bottom: 1px solid #1a1a26; }
+  border-bottom: 1px solid #79dad6;
+  color: #79dad6; }
 
 .pages figure {
   position: relative; }

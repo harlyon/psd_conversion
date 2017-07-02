@@ -13,18 +13,18 @@ nav{
 		width: calc(100% / 3);
 		a{
 			padding: 20px 0;
+			&:hover{
+				color: $hoverPink;
+			}
 		}
 	}	
 }
 
 	.navItem1{
 		flex-grow: 1;
-		.menu li{
+		.menu{
 			text-transform: uppercase;
 			font-weight: bold;
-			&:hover{
-				color: $hoverPink;
-			}
 		}
 	}	
 	.navItem2{
@@ -65,10 +65,6 @@ nav{
 			}
 		}
 	}
-
-li.link-light a{
-	color: $lightGrey;
-}
 
 
 // all FA icons
